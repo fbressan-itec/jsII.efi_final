@@ -42,7 +42,7 @@ export default function RegisterForm() {
         <div className='register-container'>
             <h2>Crear cuenta</h2>
             <Formik
-                initialValues={{ username: '', email: '', password: '', role: 'usuario' }}
+                initialValues={{ username: '', email: '', password: '', role: 'user' }}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >

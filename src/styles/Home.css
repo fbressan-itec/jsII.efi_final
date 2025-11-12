@@ -1,15 +1,45 @@
+/*
+Color del TP de programacion: #9900CC
+Color de las letras del foro: #c52ef7
+Color del sombreado: c52ef7b3
+*/
+
 .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  gap: 2rem;
-  width: 100%;
-  background: linear-gradient(135deg, #a0c4ff, #caffbf); /*efecto degrade*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 80px; 
+    padding-bottom: 50px;
+    gap: 3rem;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(135deg, #1f2833 0%, #0b0c0f 100%); 
+    color: #c5c6c7;
 }
 
+/* titulo */
+.home-container h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5rem;
+    color: #c52ef7;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px #c52ef7b3;
+}
+
+/* subtitulo */
+.home-container p {
+    font-size: 1.3rem;
+    color: #89969f;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* botones */
 .home-buttons {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
 }

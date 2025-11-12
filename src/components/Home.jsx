@@ -1,21 +1,30 @@
 import { Button } from "primereact/button";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 import "../styles/Home.css";
 
 export default function Home() {
     const navigate = useNavigate();
 
     return (
-        <div className="home-container">
-            <h1>Bienvenido</h1>
-            <div className="home-buttons">
-                <Button label="Registrarse" onClick={() => navigate("/registrarse")} />
-                <Button
-                    label="Iniciar sesión"
-                    className="p-button-secondary"
-                    onClick={() => alert("Funcionalidad próximamente")}
-                />
+        <>
+            {/* pongo el navbar */}
+            <Navbar /> 
+
+            <div className="home-container">
+                <h1>¡Unete a la comunidad!</h1>
+                <p>
+                    Unete a la comunidad de NotaGameRPG y crea tu propia historia.
+                </p>
+                <div className="home-buttons">
+                    <Button 
+                        label="Explorar el Foro" 
+                        icon="pi pi-search"
+                        className="p-button-raised p-button-info p-button-lg" 
+                        onClick={() => navigate("/posts")} 
+                    />
+                </div>
             </div>
-        </div>
+        </>
     );
 }
