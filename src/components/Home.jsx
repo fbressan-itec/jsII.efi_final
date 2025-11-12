@@ -1,6 +1,7 @@
 import { Button } from "primereact/button";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import "../styles/Home.css";
 
 export default function Home() {
@@ -10,7 +11,6 @@ export default function Home() {
         <>
             {/* pongo el navbar */}
             <Navbar /> 
-
             <div className="home-container">
                 <h1>¡Unete a la comunidad!</h1>
                 <p>
@@ -25,6 +25,7 @@ export default function Home() {
                     />
                 </div>
             </div>
+            <Footer /> 
         </>
     );
 }

@@ -3,6 +3,12 @@ Color del TP de programacion: #9900CC
 Color de las letras del foro: #c52ef7
 Color del sombreado: c52ef7b3
 */
+/* para que ocupe el toda la pagina */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .home-container {
     display: flex;
