@@ -8,7 +8,7 @@ import "../styles/RegisterForm.css"
 
 
 const validationSchema = Yup.object({
-    name: Yup.string().required("El nombre es obligatorio"),
+    username: Yup.string().required("El nombre es obligatorio"),
     email: Yup.string().email("Email invalido").required('El email es obligatorio'),
     password: Yup.string().required('La contraseña es obligatoria')
 })
@@ -42,7 +42,7 @@ export default function RegisterForm() {
         <div className='register-container'>
             <h2>Crear cuenta</h2>
             <Formik
-                initialValues={{ name: '', email: '', password: '', role: 'usuario' }}
+                initialValues={{ username: '', email: '', password: '', role: 'usuario' }}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
@@ -50,8 +50,8 @@ export default function RegisterForm() {
                     <Form className='register-form'>
                         <div className='form-field'>
                             <label>Nombre</label>
-                            <Field as={InputText} id='name' name='name' />
-                            <ErrorMessage name='name' component='small' className='error' />
+                            <Field as={InputText} id='username' name='username' />
+                            <ErrorMessage name='username' component='small' className='error' />
                         </div>
                         <div className='form-field'>
                             <label>Email</label>
