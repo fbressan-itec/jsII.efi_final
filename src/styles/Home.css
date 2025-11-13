@@ -49,3 +49,10 @@ body, html {
     gap: 2rem;
     margin-top: 1rem;
 }
+
+/* Color del usuario */
+.home-container .username_text{
+    color: #ee1123; /* tu violeta principal */
+    text-shadow: 0 0 8px #ff4c5b; /* un brillo suave */
+    font-weight: 600;
+}

@@ -1,0 +1,75 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    padding: 80px 20px 50px;
+    background: linear-gradient(135deg, #1f2833 0%, #0b0c0f 100%); 
+    color: #c5c6c7;
+}
+
+.login-container h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #c52ef7;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px #c52ef7b3;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    font-weight: bold;
+    color: #9900CC;
+    font-size: 1rem;
+}
+
+.form-field .p-inputtext-lg {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    background-color: #2c2c2c;
+    color: #c5c6c7;
+    transition: border-color 0.2s;
+}
+
+.form-field .p-inputtext-lg:focus {
+    border-color: #c52ef7;
+    box-shadow: 0 0 5px #c52ef7b3;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.p-button-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #9900CC;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.p-button-lg:hover {
+    background-color: #c52ef7;
+}

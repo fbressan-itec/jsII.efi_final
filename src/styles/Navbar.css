@@ -36,3 +36,27 @@
 .home-navbar .nav-links button {
     font-weight: 500;
 }
+
+.welcome-text {
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.username_text{
+    color: #c52ef7; /* tu violeta principal */
+    text-shadow: 0 0 8px #c52ef7b3; /* un brillo suave */
+    font-weight: 600;
+}
+
+.logout-btn {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+
+.logout-btn:hover{
+    background-color: #dc3545 !important;
+    border-color: #e71b2f !important;
+    color: white !important;
+}
