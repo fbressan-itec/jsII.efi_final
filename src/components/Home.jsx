@@ -32,13 +32,38 @@ export default function Home() {
                         </>
                     )}
                 </div>
-                <div className="home-buttons">
-                    <Button 
-                        label="Explorar el Foro" 
-                        icon="pi pi-search"
-                        className="p-button-raised p-button-info p-button-lg" 
-                        onClick={() => navigate("/posts")}
-                    />
+                <div>
+                    {!isAuthenticated ? (
+                        <>
+                            <div className="home-buttons">
+                                <Button 
+                                    label="Explorar el Foro" 
+                                    icon="pi pi-search"
+                                    className="p-button-raised p-button-info p-button-lg" 
+                                    onClick={() => navigate("/posts")}
+                                />
+                            </div>
+                            
+                        </>
+                        ) : (
+                        <>
+                            <div className="home-buttons">
+                                <Button 
+                                    label="Elige Sala de Discucion" 
+                                    icon="pi pi-comments"
+                                    className="p-button-raised p-button-info p-button-lg" 
+                                    onClick={() => navigate("/posts")}
+                                />
+                                <Button 
+                                    label="Publica en el tablon" 
+                                    icon="pi pi-pencil"
+                                    className="p-button-raised p-button-info p-button-lg" 
+                                    onClick={() => navigate("/nuevopost")}
+                                />
+                            </div>
+                        </>
+                    )}
+                    
                 </div>
             </div>
     );

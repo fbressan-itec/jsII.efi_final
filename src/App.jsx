@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./components/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./components/Profile";
+import CreatePost from "./components/CreatePost";
 
 export default function App() {
     return (
@@ -19,7 +20,8 @@ export default function App() {
             <Route path="/posts" element={<Dashboard />} /> 
 
             {/* Protegidas */}
-            <Route path="/perfil" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+            <Route path="/perfil" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+            <Route path="/nuevopost" element={<ProtectedRoute><CreatePost/></ProtectedRoute>} />
 
 
             </Routes>

@@ -115,7 +115,7 @@ export default function Dashboard() {
             )}
           </div>
         ) : (
-          /* botones con ternarrio isauth  */
+          /* botones con ternarrio is_auth  */
           <>
             <div className='post-action-bar'>
                 <Button
@@ -130,7 +130,7 @@ export default function Dashboard() {
                         label={`Crear Post en ${selectedCategory.name}`}
                         icon="pi pi-plus"
                         className="p-button-success p-button-lg"
-                        onClick={() => navigate(`/dashboard/crear-post?catId=${selectedCategory.id}`)} 
+                        onClick={() => navigate(`/nuevopost`)}
                     />
                 )}
             </div>
