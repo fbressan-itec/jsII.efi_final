@@ -19,12 +19,18 @@ export default function Navbar() {
 
     return (
         <div className="home-navbar"> 
+        <Button
+                icon="pi pi-home"
+                className="p-button-text home-icon-btn"
+                onClick={() => navigate("/")}
+                tooltip="Ir al Inicio"
+            />
             <div 
                 className="logo" 
                 onClick={() => navigate("/")} 
                 style={{cursor: 'pointer'}}
             >
-                🛡️ NotaGameRPG
+                🐉 NotaGameRPG Forum
             </div>
 
             <div className="nav-links">

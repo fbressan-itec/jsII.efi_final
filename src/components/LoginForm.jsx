@@ -26,12 +26,6 @@ export default function LoginForm() {
 
   const handleSubmit = async (values) => {
     const success = await login(values.email, values.password); 
-    if (success) {
-      toast.success("Inicio de sesión exitoso");
-      navigate('/'); 
-    } else {
-      toast.error("Credenciales inválidas");
-    }
   };
 
   return (

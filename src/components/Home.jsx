@@ -37,7 +37,7 @@ export default function Home() {
                         label="Explorar el Foro" 
                         icon="pi pi-search"
                         className="p-button-raised p-button-info p-button-lg" 
-                        onClick={() => navigate("/logearse")} //** *******CAMBIE RUTA PARA PROBAR; RECORDAR REGRESARLA A POSTS */
+                        onClick={() => navigate("/posts")}
                     />
                 </div>
             </div>

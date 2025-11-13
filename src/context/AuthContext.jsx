@@ -2,6 +2,8 @@ import React, { createContext, useEffect, useState } from 'react'
 import { jwtDecode } from 'jwt-decode'
 import { toast } from 'react-toastify'
 
+const BASE_API_URL = 'http://localhost:5000'; //defino la url en variable, si hay q cambiar se hace una vez, mas abjo la exporto
+
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
@@ -31,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
         try {
             //consulta localhost:5000/login
-            const response = await fetch('http://localhost:5000/login', {
+            const response = await fetch(`${BASE_API_URL}/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password })
@@ -94,6 +96,7 @@ export const AuthProvider = ({ children }) => {
     )
 
 }
+export { BASE_API_URL };
 
 
 
