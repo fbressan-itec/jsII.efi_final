@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./components/Profile";
 import CreatePost from "./components/CreatePost";
+import EditPost from "./components/EditPost";
 
 export default function App() {
     return (
@@ -22,6 +23,7 @@ export default function App() {
             {/* Protegidas */}
             <Route path="/perfil" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
             <Route path="/nuevopost" element={<ProtectedRoute><CreatePost/></ProtectedRoute>} />
+            <Route path="/editar-post/:id" element={<ProtectedRoute><EditPost/></ProtectedRoute>} />
 
 
             </Routes>
