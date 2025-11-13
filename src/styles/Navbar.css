@@ -21,6 +21,14 @@
     cursor: pointer;
     transition: color 0.3s;
     text-shadow: 2px 2px 8px #c52ef7b3;
+    margin-left: 10px
+}
+
+.home-icon-btn.p-button.p-button-text {
+color: #c52ef7;
+font-size: 1.3rem;
+padding: 0.5rem;
+background-color: #0b0c0ff2;
 }
 
 .home-navbar .logo:hover {
@@ -30,6 +38,7 @@
 .home-navbar .nav-links {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .home-navbar .nav-links button {
