@@ -5,18 +5,25 @@ import LoginForm from "./components/LoginForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Dashboard from "./components/Dashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Profile from "./components/Profile";
 
 export default function App() {
-  return (
-    <>
-      <Navbar /> {/* Lo importo aca para que este en todas las paginas */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/registrarse" element={<RegisterForm />} />
-        <Route path="/logearse" element={<LoginForm />} />
-        <Route path="/posts" element={<Dashboard />} /> 
-      </Routes>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <Navbar /> {/* Lo importo aca para que este en todas las paginas */}
+            <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/registrarse" element={<RegisterForm />} />
+            <Route path="/logearse" element={<LoginForm />} />
+            <Route path="/posts" element={<Dashboard />} /> 
+
+            {/* Protegidas */}
+            <Route path="/perfil" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+
+
+            </Routes>
+            <Footer />
+        </>
+    );
 }

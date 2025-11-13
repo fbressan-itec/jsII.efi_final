@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState, useContext } from 'react'
 import { jwtDecode } from 'jwt-decode'
 import { toast } from 'react-toastify'
 
@@ -6,9 +6,14 @@ const BASE_API_URL = 'http://localhost:5000'; //defino la url en variable, si ha
 
 export const AuthContext = createContext()
 
+export const useAuth = () => {
+    return useContext(AuthContext);
+}
+
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [token, setToken] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     // token con tiempo limitado
     useEffect(() => {
@@ -27,6 +32,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.removeItem("token")
             }
         }
+        setLoading(false)
     }, [])
 
     // login para conectar con la api
@@ -90,7 +96,7 @@ export const AuthProvider = ({ children }) => {
 
 
     return (
-        <AuthContext.Provider value={{ user, token, login, logout, isAuthenticated: !!token }}>
+        <AuthContext.Provider value={{ user, token, login, logout, isAuthenticated: !!token, loading }}>
             {children}
         </AuthContext.Provider>
     )
