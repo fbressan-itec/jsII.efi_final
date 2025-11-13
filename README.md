@@ -1,7 +1,10 @@
 # INTEGRANTES
-. Bressan Nadal franco Nicolas
+. Bressan Nadal Franco Nicolas (fbressan-itec)
 <br>
-. Odetto Leandro
+. Odetto Leandro (leandroitec)
+
+# Enlaces del Proyecto FlaskAPI
+https://github.com/leandroitec/efiFInalPython
 
 # INTRODUCCION
 
@@ -9,7 +12,14 @@ En la materia de Programación II desarrollamos una página temática inspirada 
 En Python, creamos una API con Flask que maneja posteos, comentarios y autenticación por roles.
 En Java, planeamos aprovechar el EFI para construir un frontend de la API y un foro para la página de programación.
 
-# INSTRUCCIONES DE INSTALACION
+# INSTRUCCIONES DE INSTALACION (luego de FlaskAPI)
+0. Ten instalado node en una version superior al 20, para verificar ($ node -v), si no lo tienes sigue la guia de instalacion de https://nodejs.org/
+1. Clonar el repositorio ssh ($ git clone git@github.com:fbressan-itec/jsII.efi_final.git)
+2. cd /jsII.efi_final
+3. Instalar dependencias ($ npm install)
+4. Correr las dos apps. En la terminal de efiFinalPython (uv run flask run --reload) y en la de jsII.efi_final (npm run dev)
+5. Abrir http://localhost:5173 
+
 
 # COMANDOS/EJECUCION
 
