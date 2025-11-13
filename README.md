@@ -44,8 +44,29 @@ En Java, planeamos aprovechar el EFI para construir un frontend de la API y un f
 4. Agregar al Login para elegir un rol (hacer logica, token decoder)
 5. Ver de usar mas Prime react, yo hice css muy personalizado
 
+#### Requisitos:
+##### Autenticación y Usuarios
 
+1. ~~Implementar un formulario de registro con los campos: name, email, password y rol (seleccionable desde un menú desplegable).~~
+2. ~~Implementar un formulario de inicio de sesión (login) que obtenga un JWT desde la API y lo almacene en localStorage.~~
+3. ~~Decodificar el token (por ejemplo, usando la librería jwt-decode) para obtener datos como el nombre, email, rol y fecha de expiración.~~
+4. ~~Gestionar la sesión del usuario mediante un contexto global (AuthContext).~~
+5. ~~Permitir cerrar sesión (logout) y limpiar el estado del usuario.~~
 
+##### CRUDs Principales
+ 
+ 1. Posts: crear, ~~listar~~, editar y eliminar publicaciones. ~~Cada post debe incluir al menos un  título, contenido, autor y fecha~~
 
+ 2. Reviews: crear, listar, editar y eliminar reseñas o comentarios. Las reviews pueden estar asociadas a un post según la API.
 
-------------------------------------------------------------------
+##### Seguridad y Roles
+
+1. Proteger las rutas privadas mediante la validación del token JWT.
+
+2. Implementar diferenciación de permisos por rol, por ejemplo: ~~Usuarios con rol admin pueden acceder a ciertas secciones o funcionalidades exclusivas.~~ Usuarios con rol user solo pueden gestionar sus propios posts o comentarios.
+
+##### Interfaz de Usuario: 
+
+1. ~~PrimeReact~~
+2. La aplicación debe ser responsive (~~Formularios validados y mensajes de error~~. ~~Botones y elementos visuales consistentes.~~ ~~Toasts o alertas para mostrar mensajes de éxito o error.~~ ~~Navegación clara con barra superior (navbar) y enlaces visibles según el rol del usuario.~~)
+
