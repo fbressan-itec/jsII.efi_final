@@ -6,77 +6,78 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { useContext, useEffect } from 'react';
 import { AuthContext } from '../context/AuthContext';
-
-import "../styles/RegisterForm.css"
+import "../styles/RegisterForm.css"; // usamos el mismo CSS que el register
 
 const validationSchema = Yup.object({ 
-    email: Yup.string().email("Email inválido").required('El email es obligatorio'),
-    password: Yup.string().required('La contraseña es obligatoria')
+  email: Yup.string().email("Email inválido").required('El email es obligatorio'),
+  password: Yup.string().required('La contraseña es obligatoria')
 });
 
 export default function LoginForm() {
-    const navigate = useNavigate();
-    const { login, isAuthenticated } = useContext(AuthContext); 
-    //redirijo a home si esta logeado
-    useEffect(() => {
-        if (isAuthenticated) {
-            navigate('/');
-        }
-    }, [isAuthenticated, navigate]);
+  const navigate = useNavigate();
+  const { login, isAuthenticated } = useContext(AuthContext); 
 
-    const handleSubmit = async (values) => {
-        // uso el login del auth contex
-        const success = await login(values.email, values.password); 
-        if (success) {
-            navigate('/'); 
-        }
-    };
+  // Si ya está autenticado, redirige al home
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, navigate]);
 
-    return (
+  const handleSubmit = async (values) => {
+    const success = await login(values.email, values.password); 
+    if (success) {
+      toast.success("Inicio de sesión exitoso");
+      navigate('/'); 
+    } else {
+      toast.error("Credenciales inválidas");
+    }
+  };
 
-        <div className='login-container'>
-            <h2>Iniciar Sesion</h2>
-            <Formik
-                initialValues={{ email: '', password: '' }}
-                validationSchema={validationSchema}
-                onSubmit={handleSubmit}
-            >
-                {({ isSubmitting }) => (
-                    <Form className='login-form'>
-                        <div className='form-field'>
-                            <label htmlFor='email'>Email</label>
-                            <Field 
-                                as={InputText} 
-                                id='email' 
-                                name='email' 
-                                placeholder='tu.email@ejemplo.com'
-                                className='p-inputtext-lg'
-                            />
-                            <ErrorMessage name='email' component='small' className='error' />
-                        </div>
-                        
-                        <div className='form-field'>
-                            <label htmlFor='password'>Contraseña</label>
-                            <Field 
-                                as={InputText} 
-                                id='password' 
-                                name='password' 
-                                type='password' // oculta la pass q pones
-                                placeholder='********' //con los *
-                                className='p-inputtext-lg'
-                            />
-                            <ErrorMessage name='password' component='small' className='error' />
-                        </div>
-                        
-                        <Button 
-                            type='submit' 
-                            label={isSubmitting ? "Accediendo..." : 'Acceder'} 
-                            className='p-button-secondary p-button-lg'
-                            disabled={isSubmitting}
-                        />
-                    </Form>
-                )}
-            </Formik>
-        </div> 
-    );
+  return (
+    <div className='register-container'> {/* mismo estilo que el register */}
+      <h2>Iniciar Sesión</h2>
+      <Formik
+        initialValues={{ email: '', password: '' }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting }) => (
+          <Form className='register-form'> 
+            <div className='form-field'>
+              <label htmlFor='email'>Email</label>
+              <Field 
+                as={InputText} 
+                id='email' 
+                name='email' 
+                placeholder='tu.email@ejemplo.com'
+                className='p-inputtext-lg'
+              />
+              <ErrorMessage name='email' component='small' className='error' />
+            </div>
+            
+            <div className='form-field'>
+              <label htmlFor='password'>Contraseña</label>
+              <Field 
+                as={InputText} 
+                id='password' 
+                name='password' 
+                type='password'
+                placeholder='********'
+                className='p-inputtext-lg'
+              />
+              <ErrorMessage name='password' component='small' className='error' />
+            </div>
+
+            <Button 
+              type='submit' 
+              label={isSubmitting ? "Accediendo..." : 'Acceder'} 
+              className='p-button-secondary p-button-lg'
+              disabled={isSubmitting}
+            />
+          </Form>
+        )}
+      </Formik>
+    </div> 
+  );
 }
