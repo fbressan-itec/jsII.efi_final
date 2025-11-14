@@ -140,3 +140,118 @@
   border-radius: 10px;
   margin: 20px auto; 
 }
+
+@media (max-width: 992px) {
+  .post-detail-card,
+  .comments-section {
+    padding: 20px;
+  }
+
+  .post-detail-card .p-card-title {
+    font-size: 1.7rem;
+  }
+
+  .comments-section h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .post-comments-container {
+    padding: 70px 15px 35px 15px;
+  }
+
+  .post-detail-card,
+  .comments-section {
+    padding: 18px;
+    max-width: 100%;
+  }
+
+  .post-detail-card .p-card-title {
+    font-size: 1.5rem;
+  }
+
+  .post-detail-card .p-card-subtitle {
+    font-size: 1rem;
+  }
+
+  .post-date {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .comments-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .comment-card {
+    padding: 12px;
+  }
+
+  .comment-card small {
+    font-size: 0.85rem;
+  }
+
+  .new-comment-form {
+    margin-top: 30px;
+  }
+
+  .new-comment-form .p-button-success {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .post-comments-container {
+    padding: 65px 12px 30px 12px;
+  }
+
+  .post-detail-card,
+  .comments-section {
+    padding: 15px;
+    border-left-width: 4px;
+  }
+
+  .post-detail-card .p-card-title {
+    font-size: 1.3rem;
+  }
+
+  .comments-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .comment-card {
+    padding: 10px;
+  }
+
+  .new-comment-form .p-button-success {
+    width: 100% !important;
+    margin: 15px 0;
+  }
+
+  .new-comment-form textarea {
+    min-height: 80px;
+  }
+}
+
+/* Pantallas muy chicas */
+@media (max-width: 400px) {
+
+  .post-detail-card .p-card-title {
+    font-size: 1.15rem;
+  }
+
+  .post-detail-card .p-card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .comments-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .comment-card small {
+    font-size: 0.8rem;
+  }
+}

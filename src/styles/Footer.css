@@ -54,3 +54,62 @@
     color: #c52ef7;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .container-footer {
+        padding: 20px 25px;
+    }
+
+    .footer_icons {
+        gap: 15px;
+    }
+
+    .footer_icons i {
+        font-size: 1.5rem;
+    }
+
+    .footer-info {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-footer {
+        padding: 18px 20px;
+    }
+
+    .footer_icons {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .footer_icons i {
+        font-size: 1.4rem;
+    }
+
+    .footer-separator {
+        width: 90%;
+    }
+
+    .footer-info {
+        font-size: 0.8rem;
+    }
+
+    .footer-brand {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer_icons i {
+        font-size: 1.3rem;
+    }
+
+    .footer-info {
+        font-size: 0.75rem;
+    }
+
+    .footer-brand {
+        font-size: 0.7rem;
+    }
+}

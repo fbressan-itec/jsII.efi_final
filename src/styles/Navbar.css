@@ -68,3 +68,56 @@ background-color: #0b0c0ff2;
     border-color: #e71b2f !important;
     color: white !important;
 }
+@media (max-width: 768px) {
+    .home-navbar {
+        height: 55px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .home-icon-btn.p-button {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-navbar {
+        height: 52px;
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .welcome-text {
+        display: none; 
+    }
+
+    .nav-links button {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .home-navbar {
+        height: px;
+        padding: 0px 8px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .home-icon-btn {
+        font-size: 1rem;
+    }
+}

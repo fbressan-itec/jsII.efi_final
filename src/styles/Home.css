@@ -56,3 +56,81 @@ body, html {
     text-shadow: 0 0 8px #ff4c5b; 
     font-weight: 600;
 }
+
+@media (max-width: 992px) {
+    .home-container h1 {
+        font-size: 3rem;
+    }
+
+    .home-container p {
+        font-size: 1.2rem;
+        max-width: 600px;
+    }
+
+    .home-buttons {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home-container {
+        padding-top: 70px;
+        padding-bottom: 40px;
+        gap: 2.5rem;
+    }
+
+    .home-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-container p {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .home-container {
+        padding-top: 60px;
+        gap: 2rem;
+    }
+
+    .home-container h1 {
+        font-size: 2rem;
+    }
+
+    .home-container p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .home-buttons {
+        max-width: 260px;
+        width: 100%;
+    }
+    .home-logo{
+        padding-top: 60px;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .home-container h1 {
+        font-size: 1.7rem;
+        text-shadow: 1px 1px 6px #c52ef7b3;
+    }
+
+    .home-container p {
+        font-size: 0.95rem;
+    }
+}

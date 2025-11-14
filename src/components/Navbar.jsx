@@ -30,7 +30,7 @@ export default function Navbar() {
                 onClick={() => navigate("/")} 
                 style={{cursor: 'pointer'}}
             >
-                🐉 NotaGameRPG Forum
+                🐉 Foro
             </div>
 
             <div className="nav-links">

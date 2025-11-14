@@ -76,3 +76,39 @@
   font-size: 0.8rem;
   margin-top: 0.2rem;
 }
+
+@media (max-width: 480px) {
+  .register-container {
+    margin: 4rem 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .register-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .p-inputtext {
+    padding: 0.6rem 0.9rem !important;
+    font-size: 0.9rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .form-buttons .p-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .register-container {
+    padding: 1.4rem;
+  }
+
+  .register-container h2 {
+    font-size: 1.3rem;
+  }
+}
