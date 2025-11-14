@@ -30,7 +30,7 @@ export default function Navbar() {
                 onClick={() => navigate("/")} 
                 style={{cursor: 'pointer'}}
             >
-                🐉 Foro
+                🐉 FORO
             </div>
 
             <div className="nav-links">

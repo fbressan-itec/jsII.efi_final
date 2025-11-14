@@ -22,7 +22,7 @@ export default function RegisterForm() {
 
     const navigate = useNavigate()
     const [roleOptions, setRoleOptions] = useState([]);
-    
+
     // get de roles
     const fetchRoles = async () => {
         try {
@@ -84,7 +84,7 @@ export default function RegisterForm() {
                         </div>
                         <div className='form-field'>
                             <label htmlFor='role'>Seleccionar Rol</label>
-                            <Field 
+                            <Field
                                 name='role'
                                 render={({ field }) => (
                                     <Dropdown
@@ -93,9 +93,9 @@ export default function RegisterForm() {
                                         value={field.value}
                                         options={roleOptions}
                                         disabled={roleOptions.length === 0}
-                                        onChange={(e) => setFieldValue('role', e.value)} 
+                                        onChange={(e) => setFieldValue('role', e.value)}
                                         placeholder={roleOptions.length === 0 ? 'Cargando Roles...' : 'Selecciona un Rol'}
-                                        className='p-inputtext-lg w-full' 
+                                        className='p-inputtext-lg w-full'
                                     />
                                 )}
                             />

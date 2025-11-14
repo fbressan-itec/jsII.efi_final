@@ -6,10 +6,10 @@ export default function Footer() {
     return (
         <footer className="container-footer">
             <div className="footer_icons">
-                <a href="#" aria-label="Facebook"><i className="pi pi-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i className="pi pi-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i className="pi pi-twitter"></i></a>
-                <a href="#" aria-label="Youtube"><i className="pi pi-youtube"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61581848688006" aria-label="Facebook"><i className="pi pi-facebook"></i></a>
+                <a href="https://www.instagram.com/evildoggieofficial/" aria-label="Instagram"><i className="pi pi-instagram"></i></a>
+                <a href="https://x.com/?lang=es" aria-label="Twitter"><i className="pi pi-twitter"></i></a>
+                <a href="https://www.youtube.com/@EvilDoggieOfficial" aria-label="Youtube"><i className="pi pi-youtube"></i></a>
             </div>
 
             <hr className="footer-separator" />

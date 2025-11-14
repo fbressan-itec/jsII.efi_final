@@ -20,13 +20,12 @@ export default function App() {
             <Route path="/registrarse" element={<RegisterForm />} />
             <Route path="/logearse" element={<LoginForm />} />
             <Route path="/posts" element={<Dashboard />} /> 
+            <Route path="/posts/:id" element={<PostComments/>} />
 
             {/* Protegidas */}
             <Route path="/perfil" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
             <Route path="/nuevopost" element={<ProtectedRoute><CreatePost/></ProtectedRoute>} />
             <Route path="/editar-post/:id" element={<ProtectedRoute><EditPost/></ProtectedRoute>} />
-            <Route path="/posts/:id" element={<PostComments />} />
-            
 
             </Routes>
             <Footer />

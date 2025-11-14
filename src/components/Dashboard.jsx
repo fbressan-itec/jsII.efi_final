@@ -4,9 +4,9 @@ import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 import { toast } from "react-toastify";
 import { ProgressSpinner } from "primereact/progressspinner";
-import api from "../api"; 
+import api from "../api";
 import { AuthContext } from "../context/AuthContext";
-import "../styles/Dashboard.css"; 
+import "../styles/Dashboard.css";
 
 export default function Dashboard() {
   const [categories, setCategories] = useState([]);
@@ -89,27 +89,27 @@ export default function Dashboard() {
     return (
       <div className="post-footer-buttons">
         <small>Por: <strong>{post.autor?.username}</strong></small>
-        <Button 
-          label="Leer más" 
+        <Button
+          label="Leer más"
           icon="pi pi-arrow-right"
-          className="p-button-text p-button-info" 
+          className="p-button-text p-button-info"
           onClick={() => navigate(`/posts/${post.id}`)}
         />
         {canEditOrDelete && (
           <div className="post-actions" style={{ display: "flex", gap: "10px" }}>
-            <Button 
-              icon="pi pi-pencil" 
+            <Button
+              icon="pi pi-pencil"
               className="p-button-sm p-button-warning p-button-outlined"
               tooltip="Editar Post"
               tooltipOptions={{ position: "top" }}
               onClick={() => navigate(`/editar-post/${post.id}`)}
             />
-            <Button 
-              icon="pi pi-trash" 
+            <Button
+              icon="pi pi-trash"
               className="p-button-sm p-button-danger p-button-outlined"
               tooltip="Eliminar Post"
               tooltipOptions={{ position: "top" }}
-              onClick={() => handleDeletePost(post.id, post.title)} 
+              onClick={() => handleDeletePost(post.id, post.title)}
             />
           </div>
         )}
